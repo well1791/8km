@@ -1,4 +1,4 @@
-# My config
+# My custom keyboard config
 
 ## How to compile
 1. Clone/copy/move this folder inside `qmk_firmware/keyboards/planck/keymaps/`
