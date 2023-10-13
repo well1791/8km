@@ -3,11 +3,6 @@
 ## Installation
 For reference [read this](https://docs.qmk.fm/#/newbs_getting_started)
 
-### Install dependencies
-```sh
-  brew install qmk/qmk/qmk
-```
-
 ### Prepare project
 
 ```sh
@@ -21,13 +16,22 @@ For reference [read this](https://docs.qmk.fm/#/newbs_getting_started)
 ## Setup [see here](https://github.com/zsa/qmk_firmware)
 
 ```sh
+  brew install qmk/qmk/qmk
+  brew tap ArmMbed/homebrew-formulae
+  brew install arm-none-eabi-gcc
   qmk setup zsa/qmk_firmware -b firmware22
 ```
 
+> NOTE: If you run into `No formula or cask found for "gcc-arm-none-eabi".`, go
+> to [ARMmbed/homebrew-formulae](https://github.com/ARMmbed/homebrew-formulae)
+
 ## How to compile
-1. `make planck/ez/glow:8km` (should display all as "ok")
-1. `mv planck_ez_glow_8km.bin ~/Downloads/`
-1. use wally
+
+```sh
+  make planck/ez/glow:8km && \
+  mv planck_ez_glow_8km.bin ~/Downloads/
+  # now use wally
+```
 
 ## Basic
 - [spreadsheet](https://docs.google.com/spreadsheets/d/1zWwkYRQJQ8ao0kMYnWUnc-Qe-N1wYalShalTAtkvUZg/edit?usp=sharing)
